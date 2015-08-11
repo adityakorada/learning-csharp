@@ -18,9 +18,16 @@ namespace consoleapplication {
             //data 
                 // variables
                    // native
-                        // stored in Place A in the memory 
+                        // stored in Stack in the memory 
+                        //not sarter, faster
+                        // int - 4bytes
+                        // bool - 2 bytes
+
                    // object / user defined types
-                        // stored in Place B in the memory 
+                        // stored in Heap in the memory 
+                        // smrter - slower
+                        // collec, array : 4* number of items
+                        // inheritance - type is not secified
                 // constants
 
             //variables :
@@ -33,23 +40,38 @@ namespace consoleapplication {
             //use
             //dispose
 
-            int count = 10;
-            count = 190;
+            //int count = 10;
+            //count = 190;
 
-            int anotherCount = 11;
-            anotherCount = 189;
+            //int anotherCount = 11;
+            //anotherCount = 189;
 
-            string name = "niranjan awati";
-            name = "jsdkldfjklsdjfdsjf";
+            //string name = "niranjan awati";
+            //name = "jsdkldfjklsdjfdsjf";
 
-            char sym = '@';
+            //char sym = '@';
 
-            float precision = 10.89f;
-            double accuracy = 190.9023435345;
+            //float precision = 10.89f;
+            //double accuracy = 190.9023435345;
 
-            bool flag = true;
+            //bool flag = true;
 
+            //List<int> counts = new List<int>() { 10, 19, 20 };
+            //counts.Add(30);
+            //count = counts[1];
 
+            DoThis("this is the passed message from the main function");//call for the function
+            DoThisAsWell("", 0);
       }
+
+        //implementation of the function
+        
+        static void DoThis(string mesage) {
+            Console.WriteLine(mesage);
+            Console.ReadLine();
+        }
+        static void DoThisAsWell(string message, int count) { 
+            
+        }
     }
 }
