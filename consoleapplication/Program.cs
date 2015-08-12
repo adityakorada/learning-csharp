@@ -16,27 +16,27 @@ namespace consoleapplication {
             // data <--> logic
 
             //data 
-                // variables
-                   // native
-                        // stored in Stack in the memory 
-                        //not sarter, faster
-                        // int - 4bytes
-                        // bool - 2 bytes
+            // variables
+            // native
+            // stored in Stack in the memory 
+            //not sarter, faster
+            // int - 4bytes
+            // bool - 2 bytes
 
-                   // object / user defined types
-                        // stored in Heap in the memory 
-                        // smrter - slower
-                        // collec, array : 4* number of items
-                        // inheritance - type is not secified
-                // constants
+            // object / user defined types
+            // stored in Heap in the memory 
+            // smrter - slower
+            // collec, array : 4* number of items
+            // inheritance - type is not secified
+            // constants
 
             //variables :
             // Life cycle of the varable ..
-            
+
             //declare
-                //type **
-                // name / indetifier **
-                // prevalue --
+            //type **
+            // name / indetifier **
+            // prevalue --
             //use
             //dispose
 
@@ -64,7 +64,7 @@ namespace consoleapplication {
             //DoThisAsWell("", 0);
 
             List<string> left = new List<string>() { "niranjan", "ravi", "amarendra", "junaid" };
-            List<string> right = new List<string>() { "niranjan"};
+            List<string> right = new List<string>() { "niranjan" };
 
             List<string> result =
             leftOuter(left, right);
@@ -73,23 +73,32 @@ namespace consoleapplication {
                 Console.WriteLine(item);
             }
             Console.ReadLine();
-      }
+        }
 
         //implementation of the function
-        
+
         static void DoThis(string mesage) {
             Console.WriteLine(mesage);
             Console.ReadLine();
         }
 
-        static List<string> leftOuter(List<string> left, List<string> right) { 
+        static List<string> TopTen(List<string> input) {
+            //get the top ten items in the input list
+            List<string> result = new List<string>();
+            for (int i = 0; i < 10; i++) {
+                result.Add(input[i]);
+            }
+            return result;
+        }
+
+        static List<string> leftOuter(List<string> left, List<string> right) {
             //return all the items in the left list but not in the right
             //can you do this ?
 
             List<string> result = new List<string>();
             foreach (var item in left) {
                 for (int i = 0; i < right.Count; i++) {
-                    if (item!=right[i]) {
+                    if (item != right[i]) {
                         result.Add(item);
                     }
                 }
@@ -97,7 +106,7 @@ namespace consoleapplication {
             return result;
         }
 
-        static void DoThisAsWell(string message, int count) { 
+        static void DoThisAsWell(string message, int count) {
             //if i were to write some body ..i would write it here .. 
             bool flag = true;
             bool insideFlag = true;
@@ -116,7 +125,7 @@ namespace consoleapplication {
                 result = 0;
             }
 
-            result = flag == true ? insideFlag==true? 20:15 : 0;
+            result = flag == true ? insideFlag == true ? 20 : 15 : 0;
 
             List<string> names = new List<string>() { "pune", "mysore", "bangalore", "chandiagrh" };
 
@@ -127,15 +136,22 @@ namespace consoleapplication {
                     resultList.Add(names[i]);
                 }
             }
-            for (int i = 0; i < resultList.Count; i++){
-			    Console.WriteLine(resultList[i]);
-			}
+            for (int i = 0; i < resultList.Count; i++) {
+                Console.WriteLine(resultList[i]);
+            }
 
             foreach (var item in names) {
-                 if (item.Contains("e")) {
+                if (item.Contains("e")) {
                     resultList.Add(item);
                 }
             }
+            while (true) {
+                
+            }
+
+            do {
+                
+            } while (true);
         }
     }
 }
