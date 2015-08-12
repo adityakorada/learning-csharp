@@ -78,8 +78,19 @@ namespace consoleapplication {
         //implementation of the function
 
         static void DoThis(string mesage) {
-            Console.WriteLine(mesage);
-            Console.ReadLine();
+            Employee e = new Employee();
+            e.SetName("niranjan");
+            e.SetRole("lecturer");
+            e.Age = 70;
+
+            Employee e1 = new Employee();
+            e1.SetName("ravi");
+            e1.SetRole("developer");
+            e.Age = 25;
+
+            List<Employee> employees = new List<Employee>() { e, e1};
+
+            e.Ping();
         }
 
         static List<string> TopTen(List<string> input) {
