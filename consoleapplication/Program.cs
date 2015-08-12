@@ -63,16 +63,18 @@ namespace consoleapplication {
             //DoThis("this is the passed message from the main function");//call for the function
             //DoThisAsWell("", 0);
 
-            List<string> left = new List<string>() { "niranjan", "ravi", "amarendra", "junaid" };
-            List<string> right = new List<string>() { "niranjan" };
+            //List<string> left = new List<string>() { "niranjan", "ravi", "amarendra", "junaid" };
+            //List<string> right = new List<string>() { "niranjan" };
 
-            List<string> result =
-            leftOuter(left, right);
+            //List<string> result =
+            //leftOuter(left, right);
 
-            foreach (var item in result) {
-                Console.WriteLine(item);
-            }
-            Console.ReadLine();
+            //foreach (var item in result) {
+            //    Console.WriteLine(item);
+            //}
+            //Console.ReadLine();
+
+            DoThis("dummy message");
         }
 
         //implementation of the function
@@ -83,12 +85,15 @@ namespace consoleapplication {
             e.SetRole("lecturer");
             e.Age = 70;
 
-            Employee e1 = new Employee();
-            e1.SetName("ravi");
-            e1.SetRole("developer");
-            e.Age = 25;
+            //Employee e1 = new Employee();
+            //e1.SetName("ravi");
+            //e1.SetRole("developer");
+            //e.Age = 25;
 
-            List<Employee> employees = new List<Employee>() { e, e1};
+            Employee e2 = new Employee();
+
+
+            //List<Employee> employees = new List<Employee>() { e, e1};
 
             e.Ping();
         }
