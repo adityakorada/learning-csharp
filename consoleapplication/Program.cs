@@ -60,8 +60,19 @@ namespace consoleapplication {
             //counts.Add(30);
             //count = counts[1];
 
-            DoThis("this is the passed message from the main function");//call for the function
-            DoThisAsWell("", 0);
+            //DoThis("this is the passed message from the main function");//call for the function
+            //DoThisAsWell("", 0);
+
+            List<string> left = new List<string>() { "niranjan", "ravi", "amarendra", "junaid" };
+            List<string> right = new List<string>() { "niranjan"};
+
+            List<string> result =
+            leftOuter(left, right);
+
+            foreach (var item in result) {
+                Console.WriteLine(item);
+            }
+            Console.ReadLine();
       }
 
         //implementation of the function
@@ -70,8 +81,61 @@ namespace consoleapplication {
             Console.WriteLine(mesage);
             Console.ReadLine();
         }
+
+        static List<string> leftOuter(List<string> left, List<string> right) { 
+            //return all the items in the left list but not in the right
+            //can you do this ?
+
+            List<string> result = new List<string>();
+            foreach (var item in left) {
+                for (int i = 0; i < right.Count; i++) {
+                    if (item!=right[i]) {
+                        result.Add(item);
+                    }
+                }
+            }
+            return result;
+        }
+
         static void DoThisAsWell(string message, int count) { 
-            
+            //if i were to write some body ..i would write it here .. 
+            bool flag = true;
+            bool insideFlag = true;
+            int result = 0;
+
+            if (flag) {
+                result = 10;
+                if (insideFlag) {
+                    result = result + 10;
+                }
+                else {
+                    result = result - 5;
+                }
+            }
+            else {
+                result = 0;
+            }
+
+            result = flag == true ? insideFlag==true? 20:15 : 0;
+
+            List<string> names = new List<string>() { "pune", "mysore", "bangalore", "chandiagrh" };
+
+            List<string> resultList = new List<string>();
+
+            for (int i = 0; i < names.Count; i++) {
+                if (names[i].Contains("e")) {
+                    resultList.Add(names[i]);
+                }
+            }
+            for (int i = 0; i < resultList.Count; i++){
+			    Console.WriteLine(resultList[i]);
+			}
+
+            foreach (var item in names) {
+                 if (item.Contains("e")) {
+                    resultList.Add(item);
+                }
+            }
         }
     }
 }
