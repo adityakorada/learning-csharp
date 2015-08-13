@@ -91,13 +91,54 @@ namespace consoleapplication {
 
             //e = new Executive();
 
-            Employee e = new Executive();
-            (e as IRegister).Register();
-            Console.ReadLine();
+            //Employee e = new Executive();
+            //(e as IRegister).Register();
+            //Console.ReadLine();
+
+
+            List<Employee> employees = new List<Employee>() { 
+                new Employee(){Name ="Niranjan"},
+                new Employee(){Name ="Junaid"},
+                new Employee(){Name ="Ravi"},
+                new Employee(){Name ="Amarendra"},
+            };
+
+            List<Employee> result = FilterEmployees(employees);
+
+            //get me all employees who have n in their names.. 
+
+
+            //excercise for homework
+            List<Employee> allEmployees = new List<Employee>() { 
+                new Employee(){Name="sdhgkjhfjkg"},
+                new Manager(){Name="ghjkfdhgkjhdfg"},
+                new Manager(){Name="dkjfgdfjkghfd"},
+                 new Executive(){Name="sdfjkdfhgkjdfhgdf"},
+                new Executive(){Name="sdfjkdfhgkjdfhgdf"},
+                 new Executive(){Name="sdfjkdfhgkjdfhgdf"},
+                  new Executive(){Name="sdfjkdfhgkjdfhgdf"}
+            };
+
+            //get me the names of all the managers ... 
+            List<string> allManagerNames = GetManagerNames(allEmployees);
+
+        }
+
+        public static List<string> GetManagerNames(List<Employee> allEmployees) {
 
         }
 
         //implementation of the function
+
+        static List<Employee> FilterEmployees(List<Employee> emps) {
+            List<Employee> result = new List<Employee>();
+            foreach (var item in emps) {
+                if (item.Name.Contains("n")) {
+                    result.Add(item);
+                }
+            }
+            return result;
+        }
 
         static void AssessEmployee(Employee e) {
 
@@ -105,7 +146,7 @@ namespace consoleapplication {
                 Console.WriteLine("We have a manager here.. ");
             }
             else {
-                Console.WriteLine("the employee is not a manager"); 
+                Console.WriteLine("the employee is not a manager");
             }
         }
 
@@ -192,11 +233,11 @@ namespace consoleapplication {
                 }
             }
             while (true) {
-                
+
             }
 
             do {
-                
+
             } while (true);
         }
     }

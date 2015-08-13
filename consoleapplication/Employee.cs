@@ -13,7 +13,7 @@ namespace consoleapplication {
     /// <summary>
     /// this is referred to as the base class
     /// </summary>
-    public class Employee {
+    public  class Employee {
         //DESIGN principles - SOLID
 
         //s: single responsiblity
@@ -22,13 +22,13 @@ namespace consoleapplication {
         //i: interface based design
         //d: dependency injection
 
-        private string name;
+        
         private string role;
         private int age;
 
         protected double crrRating;
 
-
+       
         //c`tor
         public Employee() {
             this.name = "no name as yet";
@@ -36,7 +36,7 @@ namespace consoleapplication {
             this.age = 18;
         }
         public Employee(int defaultAge) {
-            this.name = "no name as yet";
+           
             this.role = "no role as yet";
             this.age = defaultAge;
         }
@@ -52,6 +52,7 @@ namespace consoleapplication {
                 }
             }
         }
+        public string Name { get; set; }
 
         public string Location { get; set; }
 
