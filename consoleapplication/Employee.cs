@@ -5,6 +5,10 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace consoleapplication {
+
+    /// <summary>
+    /// this is referred to as the base class
+    /// </summary>
     public class Employee {
         //DESIGN principles - SOLID
 
@@ -44,13 +48,21 @@ namespace consoleapplication {
 
         public string Location { get; set; }
 
-        public void SetName(string p) {
-            //if there is a rogue value that is coming in you can choose not to set
-            this.name = p;
-        }
+      
+    }
 
-        public void SetRole(string p) {
-            this.role = p;
-        }
+
+    /// <summary>
+    /// is the child of employee
+    /// </summary>
+    public class Manager :Employee {
+        public string Role { get; set; }
+    }
+
+    /// <summary>
+    /// this is the child of employee
+    /// </summary>
+    public class Executive :Employee {
+        public float VaraibleSalaryComponent { get; set; }
     }
 }

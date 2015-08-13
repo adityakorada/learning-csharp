@@ -74,15 +74,28 @@ namespace consoleapplication {
             //}
             //Console.ReadLine();
 
-            DoThis("dummy message");
+            AssessEmployee(new Employee());
+            AssessEmployee(new Manager());
+            AssessEmployee(new Executive());
+            
         }
 
         //implementation of the function
 
+        static void AssessEmployee(Employee e) {
+
+            if (e is Manager) {
+                Console.WriteLine("We have a manager here.. ");
+            }
+            else {
+                Console.WriteLine("the employee is not a manager"); 
+            }
+        }
+
         static void DoThis(string mesage) {
             Employee e = new Employee();
-            e.SetName("niranjan");
-            e.SetRole("lecturer");
+            //e.SetName("niranjan");
+            //e.SetRole("lecturer");
             e.Age = 70;
 
             //Employee e1 = new Employee();
