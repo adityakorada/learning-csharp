@@ -74,10 +74,27 @@ namespace consoleapplication {
             //}
             //Console.ReadLine();
 
-            AssessEmployee(new Employee());
-            AssessEmployee(new Manager());
-            AssessEmployee(new Executive());
-            
+            //AssessEmployee(new Employee());
+            //AssessEmployee(new Manager());
+            //AssessEmployee(new Executive());
+
+
+            //Employee e = null;
+
+            //e = new Employee();
+            /////.... for this time the variable is behaving like an employee
+            /////
+
+            //e = new Manager();
+            ////here the variable now starts behaving like a manager ..
+
+
+            //e = new Executive();
+
+            Employee e = new Executive();
+            (e as IRegister).Register();
+            Console.ReadLine();
+
         }
 
         //implementation of the function
