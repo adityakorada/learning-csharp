@@ -125,7 +125,15 @@ namespace consoleapplication {
         }
 
         public static List<string> GetManagerNames(List<Employee> allEmployees) {
-
+            List<string> result=new List<string>();
+            foreach(var item in allEmployees)
+            {
+            if(item is Manager)
+            {
+                result.Add(item.Name);
+            }
+            }
+            return result;
         }
 
         //implementation of the function
